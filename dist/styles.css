@@ -178,6 +178,9 @@ button:first-child {
   box-shadow: 2px 2px 5px var(--greenish--);
   background-color: var(--whitish-green--);
 }
+#todo-form {
+  display: block;
+}
 .addTodo {
   display: flex;
   justify-content: center;
