@@ -17,8 +17,6 @@ body {
 }
 /* Main content area */
 #app {
-  display: flex;
-  flex-direction: column;
   max-width: 900px;
   margin: 20px auto;
   background-color: var(--white--);
@@ -173,13 +171,11 @@ button:first-child {
 /* Todo Form and Update Todo button */
 #todo-form,
 .update-todo {
+  display: block;
   border: 1px solid var(--greyish--);
   border-radius: 7px;
   box-shadow: 2px 2px 5px var(--greenish--);
   background-color: var(--whitish-green--);
-}
-#todo-form {
-  display: block;
 }
 .addTodo {
   display: flex;
