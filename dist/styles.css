@@ -1,0 +1,256 @@
+/* Variables */
+:root {
+  --white--: #FFF;
+  --zero-margin--: 0;
+  --zero-padding--: 0;
+  --greenish--: #28a745;
+  --whitish-green--: #eafde8;
+  --greyish--: #ccc;
+  --lightyellow--: #fbfbd0;
+}
+/* Content area */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: var(--zero-margin--);
+  padding: var(--zero-padding--);
+}
+/* Main content area */
+#app {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 20px auto;
+  background-color: var(--white--);
+  border: 1px solid var(--greyish--);
+  padding: var(--zero-padding--);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Header with logo and app title */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--zero-margin--);
+  margin-left: var(--zero-margin--);
+  margin-right: var(--zero-margin--);
+  margin-bottom: 20px;
+  padding-top: var(--zero-padding--);
+  width: 100%;
+  background-color:  var(--greenish--);
+}
+.siteLogo {
+  padding: 10px;
+  width: 20%;
+  object-fit: contain;
+}
+.mainHeading {
+  margin: var(--zero-margin--);
+  padding: 10px;
+  font-size: 1.6rem;
+  color: var(--white--);
+}
+/* Element type selectors */
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+ul {
+  list-style: none;
+  padding: var(--zero-padding--);
+}
+li {
+  margin: 5px var(--zero-margin--);
+  padding: 5px;
+  border: 1px solid var(--greyish--);
+  border-radius: 4px;
+  background-color: var(--white--);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+li:hover {
+  background-color: var(--whitish-green--);
+}
+button {
+  margin-bottom: -7px;
+  margin-top: -7px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+}
+button:hover {
+  transform: scale(1.1);
+}
+button:first-child {
+  margin-left: 7px;
+}
+/* Projects */
+#project-name {
+  margin: var(--zero-margin--);
+  width: 40%;
+  font-size: 1rem;
+}
+#projects,
+.projectHeading {
+  padding: 10px 20px var(--zero-padding--) 20px;
+}
+.projectHeading {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+#projects li {
+  display: grid;
+  grid-template-columns: 1fr 35px 35px; 
+  padding-top: 8px;
+}
+/* Hover effect for projects */
+#projects li:hover {
+  background-color: var(--lightyellow--);
+}
+/* Hghlighting selected project */
+#projects li.selected {
+  background-color: var(--whitish-green--);
+}
+#project-form button,
+#add-todo {
+  margin-top: 5px;
+}
+/* Todos */
+/* Background color for todos */
+#todos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 95%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--whitish-green--);
+}
+/* Background color for individual todo items */
+.todo-item {
+  width: 40%;
+}
+.todo-item:hover {
+  background-color:var(--lightyellow--);
+}
+/* Additional styling for todo item details */
+.todo-item h3 {
+  margin: var(--zero-margin--);
+  font-size: 1.2rem;
+}
+.todo-item p {
+  margin: 5px var(--zero-margin--);
+}
+/* Add Project, Add Todos and toggle Todo Form buttons */
+#toggle-todo-form,
+#add-project,
+#add-todo {
+  margin-bottom: 10px;
+  background-color: var(--greenish--);
+  color: var(--white--);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#toggle-todo-form:hover {
+  background-color: var(--greenish--);
+}
+#todo-list,
+#project-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+/* Todo Form and Update Todo button */
+#todo-form,
+.update-todo {
+  border: 1px solid var(--greyish--);
+  border-radius: 7px;
+  box-shadow: 2px 2px 5px var(--greenish--);
+  background-color: var(--whitish-green--);
+}
+.addTodo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#add-todo {
+  margin-bottom: 2px;
+}
+/* Todo fields */
+input,
+select {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 0.9remx;
+  border: 1px solid var(--greyish--);
+  border-radius: 4px;
+}
+#todo-form label,
+.update-todo label {
+  font-size: 1.1rem;
+}
+#todo-form,
+.update-todo {
+  padding: 20px;
+  width: 302px;
+}
+/* Edit and update Todos */
+.updateTodo,
+.editTodos {
+  margin-top: 20px;
+  margin-bottom: -21px;
+  margin-left: -21px;
+  margin-right: -21px;
+  padding: 5px;
+  width: 111%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #093701;
+}
+.editTodos {
+  padding: 2px;
+}
+.updateTodo button,
+.editTodos button,
+button {
+  font-size: 1.3rem;
+}
+.updateTodo button,
+.editTodos button {
+  margin-top: 2px;
+  margin-bottom: -2px;
+}
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: var(--zero-margin--);
+  margin-right: var(--zero-margin--);
+  padding-bottom: var(--zero-padding--);
+  padding: 10px;
+  width: 98%;
+  background-color: var(--greenish--);
+}
+.siteLogoF {
+  padding: 10px;
+  width: 13%;
+  object-fit: contain;
+}
+.mainHeadingF {
+  font-size: 17px;
+  color: var(--white--);
+}
