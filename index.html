@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="bundle.js" defer></script>
+<body>
+  <!--Main-->
+  <div id="app">
+    <!--Header-->
+    <header>
+      <img class="siteLogo" src="./images/siteLogo.png" alt="site logo" id="site-logo">
+      <h1 class="mainHeading">Todo List App</h1>
+    </header>
+    <!--Add a project to the projects list-->
+    <div id="project-list">
+      <h1>Projects</h1>
+      <form id="project-form">
+        <input type="text" id="project-name" placeholder="Enter project name" required>
+        <button type="submit" id="add-project">Add Project</button>
+      </form>
+      <!--Project lists-->
+      <div class="projectHeading">Projects list (Add todos then click a project to view its todos)</div>
+      <ul id="projects">
+        <!-- Projects will be dynamically added here -->
+      </ul>
+    </div>
+    <!--Add a todo to the todos list-->
+    <div id="todo-list">
+      <h1>Todos</h1>
+      <button id="toggle-todo-form">Add Todos</button>
+      <form id="todo-form" style="display: none;">
+        <label for="todo-title">Title:</label>
+        <input type="text" id="todo-title" placeholder="Enter todo title" required><br>
+        <label for="todo-description">Description:</label>
+        <input type="text" id="todo-description" placeholder="Enter todo description"><br>
+        <label for="todo-start-date">Start date:</label>
+        <input type="date" id="todo-start-date" placeholder="Enter start date"><br>
+        <label for="todo-end-date">End date:</label>
+        <input type="date" id="todo-end-date" placeholder="Enter end date"><br>
+        <label for="todo-priority">Priority:</label>
+        <select id="todo-priority">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select><br>
+        <label for="todo-notes">Notes:</label>
+        <input type="text" id="todo-notes" placeholder="Enter notes"><br>
+        <label for="project-select">Project:</label>
+        <select id="project-select" required>
+          <option value="" disabled selected>Select a Project</option><br>
+          <!-- Projects will be dynamically added here -->
+        </select><br>
+        <div class="addTodo">
+          <button type="submit" id="add-todo">Add Todo</button>
+        </div>
+      </form>
+      <!--Todo lists-->
+      <div id="todos">
+        <!-- Todos will be dynamically added here -->
+      </div>
+      <!--Footer-->
+      <footer>
+        <img class="siteLogoF" src="./images/siteLogo.png" alt="site logo" id="site-logo">
+        <h1 class="mainHeadingF">Developed by Dr. Kato Samuel Namuene</h1>
+        <h1 class="mainHeadingF">Email: kato.namuene@ubuea.cm</h1>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
